@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+{% endblock %}
+
+{% block content %}
+    <h1>Honors Precalculus</h1>
+    <div class="sidebar">
+        <div id="unit1" class="sidebar-item" onclick="toggleContent('unit1-content')"><a>Unit 1</a></div>
+        <div id="unit2" class="sidebar-item" onclick="toggleContent('unit2-content')"><a>Unit 2</a></div>
+        <div id="unit3" class="sidebar-item" onclick="toggleContent('unit3-content')"><a>Unit 3</a></div>
+    </div>
+      
+    <div class="content">
+        <div id="unit1-content" class="unit-content">
+          <h2>Unit 1 Content</h2>
+          <p>This is the content for Unit 1.</p>
+        </div>
+        
+        <div id="unit2-content" class="unit-content">
+          <h2>Unit 2 Content</h2>
+          <p>This is the content for Unit 2.</p>
+        </div>
+        
+        <div id="unit3-content" class="unit-content">
+          <h2>Unit 3 Content</h2>
+          <p>This is the content for Unit 3.</p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='scripts/content-toggle.js') }}"></script>
+      
+{% endblock %}
